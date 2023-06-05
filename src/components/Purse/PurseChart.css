@@ -1,0 +1,17 @@
+.purse__chart {
+  position: relative;
+}
+
+.purse__chart h2 {
+  margin-bottom: 32px;
+}
+
+.purse__chart::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 352px;
+  height: 0px;
+  opacity: 0.5;
+  border: 1px solid #dedede;
+}
