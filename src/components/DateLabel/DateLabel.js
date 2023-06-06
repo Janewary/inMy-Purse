@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const DateLabel = (props) => {
   const year = props.date.getFullYear();
@@ -13,3 +14,7 @@ const DateLabel = (props) => {
 };
 
 export default DateLabel;
+
+DateLabel.propTypes = {
+  date: PropTypes.node.isRequired,
+};

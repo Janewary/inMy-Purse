@@ -34,5 +34,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-functional": "^5.0.8",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-no-null": "^1.0.2"
   }
 }

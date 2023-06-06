@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import PropTypes from "prop-types";
 import ChartBar from "./ChartBar";
 import { FilterContext } from "../Purse/PurseBlock";
 import "./Chart.css";
@@ -24,3 +25,7 @@ const Chart = (props) => {
 };
 
 export default Chart;
+
+Chart.propTypes = {
+  chartDatas: PropTypes.node.isRequired,
+};

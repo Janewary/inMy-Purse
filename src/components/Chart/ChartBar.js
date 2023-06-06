@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { addComma } from "../../utils/numberUtils.js";
 import "./ChartBar.css";
 
@@ -45,3 +46,10 @@ const ChartBar = (props) => {
 };
 
 export default ChartBar;
+
+ChartBar.propTypes = {
+  amount: PropTypes.node.isRequired,
+  maximumAmount: PropTypes.node.isRequired,
+  year: PropTypes.node.isRequired,
+  label: PropTypes.node.isRequired,
+};

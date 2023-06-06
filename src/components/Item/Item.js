@@ -1,4 +1,5 @@
 import React, { useCallback, useContext, useState } from "react";
+import PropTypes from "prop-types";
 import { ItemDispatchContext } from "../../App.js";
 import { addComma } from "../../utils/numberUtils.js";
 import DateLabel from "../DateLabel/DateLabel";
@@ -60,3 +61,11 @@ const Item = (props) => {
 };
 
 export default Item;
+
+Item.propTypes = {
+  amountType: PropTypes.node.isRequired,
+  title: PropTypes.node.isRequired,
+  amount: PropTypes.node.isRequired,
+  id: PropTypes.node.isRequired,
+  date: PropTypes.node.isRequired,
+};

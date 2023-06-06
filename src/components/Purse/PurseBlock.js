@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo, useCallback } from "react";
+import PropTypes from "prop-types";
 import PurseCurrent from "./PurseCurrent";
 import PurseChart from "./PurseChart";
 import PurseList from "./PurseList";
@@ -50,3 +51,8 @@ const PurseBlock = (props) => {
 };
 
 export default PurseBlock;
+
+PurseBlock.propTypes = {
+  items: PropTypes.node.isRequired,
+  isAddItem: PropTypes.node.isRequired,
+};

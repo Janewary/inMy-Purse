@@ -17,8 +17,8 @@ function App() {
     const localItems = JSON.parse(localStorage.getItem("items"));
 
     if (localItems === null) {
-      localStorage.setItem("items", JSON.stringify(items));
-      localStorage.setItem("nextItemId", nextItemId);
+      localStorage.setItem("items", (items) => JSON.stringify(items));
+      localStorage.setItem("nextItemId", (nextItemId) => nextItemId);
 
       return;
     }
@@ -36,7 +36,7 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
-    localStorage.setItem("nextItemId", nextItemId);
+    localStorage.setItem("nextItemId", (nextItemId) => nextItemId);
   }, [items]);
 
   const onAdd = useCallback((addItemData) => {
@@ -54,6 +54,7 @@ function App() {
 
   const memoizedDispatches = useMemo(() => {
     return { onAdd, onRemove };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const memoizedNextItemId = useMemo(() => {
